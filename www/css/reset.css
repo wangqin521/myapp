@@ -1,0 +1,17 @@
+ul,ol{
+    list-style: none;
+}
+a{
+    color: #7A7A7A;
+}
+body{
+    font-size: 3vw;
+}
+.scroll{
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling : touch;
+}
+.scroll::-webkit-scrollbar {
+    display: none;
+}
