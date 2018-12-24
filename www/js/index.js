@@ -1,10 +1,11 @@
 $(function() {
+//首页动态数据获取及渲染
     let url1 = 'https://wei-test.vipxiaoqu.com/wty-test/ws/homeAction20170807!getHome.sy?wtyCommunityId=1';
     let url2 = 'https://wei-test.vipxiaoqu.com/wty-test/ws/homeAction20170807!getHomeDynamically.sy?startIndex=1&pageSize=3&wtyCommunityId=1'
     let imgUrl = 'https://file-test.vipxiaoqu.com/';
+    //轮播图、快捷区、专题区、苏果专场、品牌特卖
     $.get(url1, function (res) {
         let data = $.parseJSON(res).data;
-
         // 轮播图---自动播放
         let lunbo = data.headAdvert;
         let lun_url = lunbo.map(function(val){
@@ -75,16 +76,14 @@ $(function() {
         }
         $("#home_pptm ul").html(tm_html1+tm_html2);
     });
-
+    // 1F、2F、3F
     $.get(url2, function (res2) {
         let res = $.parseJSON(res2).data;
         let data = res.homePageTemplateInfo;
-        console.log(data)
         $("#home_floor ul").map(function (index,val) {
             let i = index;
             let floor_bg_img = imgUrl+data[i].floor.lb[0].pic;
             let html1 = `<li><a href="#"><img src=${floor_bg_img}></a></li>`;
-            let html3 = '';
             let html2 = '';
             data[i].floor.sp.map(function(val){
                 let floor_sm_img = imgUrl+val.serviceEvent.picture;
@@ -100,20 +99,39 @@ $(function() {
                             <i></i>
                           </div></li>`;
             });
-            console.log(html2);
             $("#home_floor ul").eq(i).html(html1+html2);
 
         });
     });
+
+//heder样式切换、to_top样式实现
+    $("#home_article").on('scroll',function(){
+        let top = $("#home_article").scrollTop();
+        let height1 = $("#home_banner").height();
+        let height2 = $("#home_pptm").offset().top;
+        let height3 = $("home_article header").height();
+        if(top>=height1){
+            $("#home_article header").css("background","linear-gradient(to right,#F2555F,#C64440)");
+        }else{
+            $("#home_article header").css("background","rgba(0,0,0,0.05)");
+        }
+        if(height2 <= height3){
+            $("#to_top").show();
+        }else{
+            $("#to_top").hide();
+        }
+
+    })
+
 // footer 选项卡功能实现页面的切换
     $("footer a").on('click', function () {
         $(this).addClass("active_i").siblings().removeClass("active_i");
         let i = $(this).index();
         $(this).parent().siblings().not("header").eq(i).addClass("active").siblings().removeClass("active");
     })
-
-
 })
+
+// a
 
 
 

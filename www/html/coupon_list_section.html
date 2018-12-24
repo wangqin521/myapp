@@ -1,0 +1,36 @@
+<section id="coupon_list">
+    <header class="border_bottom ">
+        <nav class="left">
+            <a href="#" data-target="back" class="f_black back small"><i class="back-btn"></i></a>
+        </nav>
+        <h1 class="title">优惠券</h1>
+    </header>
+    <article class="active scrolling" id="couponList_article">
+        <ul class="list coupon" id="couponList_ul">
+        </ul>
+    </article>
+</section>
+
+<script type="text/html" id="coupon_list_template">
+    {{each}}
+    <li class="item m_li bg_coupon" onclick="getCouponDetail_service({{$value.id}},0,0)">
+        <div class="coupon_left">
+            <div>
+                <h1><b>￥</b><span>{{$value.price2}}</span></h1>
+                <h1>满{{$value.price1}}立减</h1>
+            </div>
+        </div>
+        <div class="coupon_right">
+            <h1><span>线上用</span>{{$value.name}}</h1>
+            <!--<h1>全部商品可用</h1>-->
+            <h1>{{$value.startTime}}~{{$value.endTime}}</h1>
+            <h1>可领:{{$value.availableTakeNum}}次</h1>
+            {{if $value.availableTakeNum == 0}}
+            <p class="coupon_already">已领取</p>
+            {{else}}
+            <p class="coupon_unreceived">立即领取</p>
+            {{/if}}
+        </div>
+    </li>
+    {{/each}}
+</script>
