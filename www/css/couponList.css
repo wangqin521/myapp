@@ -1,0 +1,16 @@
+#couponList_section header{
+    background: #FFF;
+    border-bottom: 1px solid #DADADA;
+}
+#couponList_section header a{
+    display: inline-block;
+    width: 5vw;
+    height: 5vw;
+    background: url("../img/black.png") no-repeat;
+    background-size: 100vw 100vw;
+}
+#couponList_section header h1{
+    color: #000;
+    font-size: 4vw;
+    margin: 6vw auto 5vw;
+}
