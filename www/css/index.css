@@ -22,7 +22,7 @@ header ul li:first-child img{
     height: 9vw;
     margin:0 2vw;
 }
-header ul li:not(:first-child) a{
+header ul li:nth-child(2)~li a{
     display: block;
     text-align: center;
     width: 12vw;
@@ -32,7 +32,7 @@ header ul li:not(:first-child) img{
     width: auto;
     height: 7vw;
 }
-#home_search{
+input.search_input{
     width: 56vw;
     height: 9vw;
     margin: 0 2vw;
@@ -58,7 +58,7 @@ header ul li:not(:first-child) img{
 }
 #home_banner{
     position: relative;
-    top: -15vw;
+    top: -17vw;
     left: 0;
 }
 #home_banner img{
@@ -84,7 +84,7 @@ header ul li:not(:first-child) img{
 /*首页-主体-banner*/
 #home_nav,#home_activity,#home_sgzc,#home_pptm,#home_floor>div{
     width: 99vw;
-    margin: 0 auto 1vw;
+    margin: 0 auto 2vw;
     background: #FFF;
     border-radius: 1.5vw;
     z-index: 15;
@@ -101,7 +101,7 @@ header ul li:not(:first-child) img{
 }
 #home_nav{
     position: absolute;
-    top: 32vw;
+    top: 30vw;
     left: 0.5vw
 }
 #home_nav div img{
@@ -124,7 +124,7 @@ header ul li:not(:first-child) img{
 }
 /*首页-主体-活动专题*/
 div#home_activity{
-    margin-top: 22vw;
+    margin-top: 21vw;
     background: #EEE;
 }
 #home_activity img{
@@ -240,9 +240,6 @@ div#home_activity{
     bottom: 20vw;
     right: 5vw;
     display: none;
-}
-#to_top a{
-    display: block;
     width: 12vw;
     height: 12vw;
     background: rgba(255,255,255,0.8);
@@ -307,4 +304,15 @@ footer a:nth-child(5).active_i i{
     background: url("../img/footer/purple_13.png") no-repeat;
     background-size: 100% 100%;
 }
-
+/*返回*/
+.back{
+    display: inline-block;
+    width: 5vw;
+    height: 5vw;
+    background: url("../img/black.png") no-repeat 50% 50%;
+    background-size: 2.5vw 4vw;
+    position: absolute;
+    top: 50%;
+    left: 5vw;
+    margin-top: -2.5vw;
+}

@@ -104,7 +104,7 @@ $(function() {
         });
     });
 
-//heder样式切换、to_top样式实现
+// heder样式切换、to_top样式实现
     $("#home_article").on('scroll',function(){
         let top = $("#home_article").scrollTop();
         let height1 = $("#home_banner").height();
@@ -122,7 +122,10 @@ $(function() {
         }
 
     })
-
+    // 点击返回头部
+    $("#to_top").on('click',function(){
+        $("#home_article").scrollTop(0);
+    })
 // footer 选项卡功能实现页面的切换
     $("footer a").on('click', function () {
         $(this).addClass("active_i").siblings().removeClass("active_i");

@@ -15,3 +15,10 @@ body{
 .scroll::-webkit-scrollbar {
     display: none;
 }
+article{
+    position: absolute;
+}
+header ~ article{
+    top: 17vw;
+}
+

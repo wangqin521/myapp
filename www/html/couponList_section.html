@@ -1,10 +1,55 @@
 <section id="couponList_section">
     <header>
-        <a href="#" data-target="back"><i></i></a>
+        <a href="#" data-target="back" class="back"></a>
         <h1>优惠券</h1>
     </header>
-    <article class="active scrolling" id="couponList_article">
+    <article class="active scroll" id="couponList_article">
         <ul id="couponList_ul">
+            <!--<li class="couponList_li">-->
+                <!--<div class="couponList_left">-->
+                    <!--<h1><span>￥</span>20</h1>-->
+                    <!--<p>满88立减</p>-->
+                <!--</div>-->
+                <!--<div class="couponList_right">-->
+                    <!--<p><span>线上用</span><span>粮油复食全场满88减20</span></p>-->
+                    <!--<p>2018-07-30~2017-12-31</p>-->
+                    <!--<p>可领:100次</p>-->
+                    <!--<b class="without">立即领取</b>-->
+                <!--</div>-->
+            <!--</li>-->
         </ul>
     </article>
 </section>
+<script id="couponList_template">
+    $(function () {
+        let url = 'https://wei-test.vipxiaoqu.com/wty-test/ws/couponAction20170807!getCouponList.sy?communityId=1';
+        let ul = $("#couponList_ul");
+        let html = '';
+        $.get(url,function(res){
+            let data = $.parseJSON(res).data;
+            console.log(data)
+            data.map(function (val) {
+                let price1 = val.price1;
+                let price2 = val.price2;
+                let name = val.name;
+                let showStartTime = val.showStartTime.substring(0,11);
+                let showEndTime = val.showEndTime.substring(0,11);
+                let numLimit = val.numLimit;
+                   html += `<li class="couponList_li"><div class="couponList_left"><h1><span>￥</span>${price2}</h1><p>满${price1}立减</p></div><div class="couponList_right"><p><span>线上用</span><span>${name}</span></p><p>${showStartTime}~${showEndTime}</p><p>可领:${numLimit}次</p><b class="without">立即领取</b></div></li>`;
+
+            })
+            ul.html(html);
+            $("#couponList_ul b:last-child").on('click',function(){
+                let num = $(this).prev().text().substring(3).split("次")[0];
+                if(num != 0){
+                    num -= 1;
+                    $(this).prev().text('可领:' + num + '次')
+                }else{
+                    $(this).prev().text('可领:' + num + '次')
+                    $(this).removeClass("without").addClass("already").text("已领取");
+                }
+            })
+        })
+
+    })
+</script>

@@ -2,15 +2,92 @@
     background: #FFF;
     border-bottom: 1px solid #DADADA;
 }
-#couponList_section header a{
-    display: inline-block;
-    width: 5vw;
-    height: 5vw;
-    background: url("../img/black.png") no-repeat;
-    background-size: 100vw 100vw;
-}
 #couponList_section header h1{
     color: #000;
     font-size: 4vw;
-    margin: 6vw auto 5vw;
+    margin: 5vw auto;
+}
+#couponList_ul{
+    width: 100vw;
+}
+.couponList_li{
+    position: relative;
+    background: url("../img/coupon_bg.png") no-repeat;
+    background-size: 100% 100%;
+    width: 98vw;
+    height: 25.5vw;
+    margin: 0 auto 2vw;
+    padding: 2vw 0;
+    overflow: hidden;
+}
+.couponList_li>div{
+    float: left;
+}
+.couponList_left{
+    border-right: 1px dashed #DADADA;
+    width: 25.5vw;
+    height: 21.5vw;
+    padding: 1vw 2vw 4vw;
+    text-align: center;
+
+}
+.couponList_left h1{
+    margin: 0;
+    font-size: 12vw;
+    left: 2vw;
+    position: relative;
+}
+.couponList_left h1 span{
+    font-size: 5vw;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -2vw;
+}
+.couponList_left p{
+    font-size: 4vw;
+}
+.couponList_right{
+    padding: 2vw 0vw 1vw 4vw;
+    width: 72vw;
+}
+.couponList_right p{
+    margin-bottom: 2vw;
+    font-size: 3.5vw;
+}
+.couponList_right span:first-child{
+    display: inline-block;
+    width: 14vw;
+    height: 5vw;
+    padding: 0.5vw 0 0 1vw;
+    color: #FFF;
+    background: url("../img/coupon_icon.png") no-repeat;
+    background-size: 100% 100%;
+}
+.couponList_right b{
+    display: inline-block;
+
+    height: 8vw;
+    text-align: center;
+    line-height: 8vw;
+    background: #C6423D;
+    color: #FFF;
+    position: absolute;
+}
+.already {
+    width: 25vw;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg); 	/* IE 9 */
+    -moz-transform:rotate(45deg); 	/* Firefox */
+    -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+    -o-transform:rotate(45deg); 	/* Opera */
+    top: 2vw;
+    right: -6.5vw;
+}
+.without{
+    width: 18vw;
+    right: 4vw;
+    top: 50%;
+    margin-top: -4vw;
+    border-radius: 2vw;
 }
