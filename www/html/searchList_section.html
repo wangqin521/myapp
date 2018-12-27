@@ -25,6 +25,8 @@
 </section>
 <script id="searchList_template">
     $(function(){
-
+        $("#searchList_section b").on('click',function(){
+            $(this).prev().val("");
+        })
     })
 </script>

@@ -1,7 +1,8 @@
 $(function() {
 //首页动态数据获取及渲染
     let url1 = 'https://wei-test.vipxiaoqu.com/wty-test/ws/homeAction20170807!getHome.sy?wtyCommunityId=1';
-    let url2 = 'https://wei-test.vipxiaoqu.com/wty-test/ws/homeAction20170807!getHomeDynamically.sy?startIndex=1&pageSize=3&wtyCommunityId=1'
+    let url2 = 'https://wei-test.vipxiaoqu.com/wty-test/ws/homeAction20170807!getHomeDynamically.sy?startIndex=1&pageSize=3&wtyCommunityId=1';
+    let url3 = 'https://wei-test.vipxiaoqu.com/wty-test/ws/serviceAction20170807!getServiceMenu.sy?communityId=1';
     let imgUrl = 'https://file-test.vipxiaoqu.com/';
     //轮播图、快捷区、专题区、苏果专场、品牌特卖
     $.get(url1, function (res) {
@@ -127,11 +128,62 @@ $(function() {
         $("#home_article").scrollTop(0);
     })
 // footer 选项卡功能实现页面的切换
-    $("footer a").on('click', function () {
-        $(this).addClass("active_i").siblings().removeClass("active_i");
-        let i = $(this).index();
-        $(this).parent().siblings().not("header").eq(i).addClass("active").siblings().removeClass("active");
+//     $("footer a").on('click', function () {
+//         $(this).addClass("active_i").siblings().removeClass("active_i");
+//         let i = $(this).index();
+//         $(this).parent().siblings().not("header").eq(i).addClass("active").siblings().removeClass("active");
+//     })
+    //分类页数据渲染
+    $.get(url3,function(res){
+        let data = $.parseJSON(res).data;
+        let html = '';
+        let html1 = '';
+        let html2 = '';
+        let html4 = '';
+        let html5 = '';
+        let code = [];
+        data.map(function(val,index){
+            let name = val.name;
+            if(index == 0){
+                html1 = `<li class="classify_left_bg">${name}</li>`
+            }else{
+                html2 += `<li>${name}</li>`
+            }
+            html=html1+html2;
+            code.push(val.code);
+        })
+        console.log(code);
+        code.map(function(val){
+            let url_r = url3+'&parentId='+val;
+            console.log(url_r);
+            $.get(url_r,function(res){
+                let data_r = $.parseJSON(res).data;
+                let html3 = '';
+                data_r.map(function(val){
+                    let name_r = val.name;
+                    let picture =imgUrl+val.picture;
+                    html3 += `<li><a href="#"><div><img src="${picture}" alt=""></div><span>${name_r}</span></a></li>`
+                })
+                console.log(html3);
+                if(val == 4000){
+                    html4 = `<ul class="active_ul">${html3}</ul>`;
+                }else{
+                    html5 += `<ul class="unactive_ul">${html3}</ul>`;
+                }
+
+                $("#classify_right").html(html4+html5);
+            })
+        })
+        $("#classify_left ul").html(html);
+        // 分类页样式
+        $("#classify_left li").on('click',function(){
+            $(this).addClass("classify_left_bg").siblings().removeClass("classify_left_bg");
+            let i = $(this).index();
+            $("#classify_right ul").eq(i).show().siblings().hide();
+        })
     })
+
+
 })
 
 
