@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad0f6309-be1a-4dc3-9946-e3cb389b5c68" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/css/couponList.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/css/couponList.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/css/lib/Jingle.css" beforeDir="false" afterPath="$PROJECT_DIR$/www/css/lib/Jingle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/www/index.html" afterDir="false" />
+=======
+>>>>>>> dev
       <change beforePath="$PROJECT_DIR$/www/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/js/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
@@ -21,9 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/index.html">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="230">
               <caret line="583" column="14" lean-forward="true" selection-start-line="583" selection-start-column="14" selection-end-line="583" selection-end-column="68" />
               <folding>
@@ -55,11 +59,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="508">
               <caret line="207" column="49" selection-start-line="207" selection-start-column="49" selection-end-line="207" selection-end-column="49" />
+=======
+            <state relative-caret-position="416">
+              <caret line="578" column="39" selection-start-line="578" selection-start-column="39" selection-end-line="578" selection-end-column="39" />
+>>>>>>> dev
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/www/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="666">
@@ -73,6 +82,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-231">
               <caret line="1" selection-start-line="1" selection-end-line="4" selection-end-column="13" />
+=======
+        <entry file="file://$PROJECT_DIR$/www/js/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="186" selection-start-line="186" selection-end-line="186" />
+>>>>>>> dev
             </state>
           </provider>
         </entry>
@@ -114,11 +129,19 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="ProjectFrameBounds">
     <option name="x" value="-212" />
     <option name="y" value="51" />
     <option name="width" value="1503" />
     <option name="height" value="962" />
+=======
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="561" />
+    <option name="y" value="142" />
+    <option name="width" value="1262" />
+    <option name="height" value="889" />
+>>>>>>> dev
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -126,7 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -149,6 +171,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -181,15 +204,27 @@
       <updated>1545375608369</updated>
       <workItem from="1545375623195" duration="10969000" />
       <workItem from="1545787255281" duration="29705000" />
+<<<<<<< HEAD
       <workItem from="1545872751582" duration="29101000" />
+=======
+      <workItem from="1545960128719" duration="361000" />
+>>>>>>> dev
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="69775000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-212" y="51" width="1503" height="962" extended-state="0" />
+=======
+    <option name="totallyTimeSpent" value="41035000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="561" y="142" width="1262" height="889" extended-state="0" />
+    <editor active="true" />
+>>>>>>> dev
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.020477816" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -268,6 +303,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/www/css/lib/Jingle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -327,6 +363,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="508">
           <caret line="207" column="49" selection-start-line="207" selection-start-column="49" selection-end-line="207" selection-end-column="49" />
+=======
+    <entry file="file://$PROJECT_DIR$/www/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="578" column="39" selection-start-line="578" selection-start-column="39" selection-end-line="578" selection-end-column="39" />
+>>>>>>> dev
         </state>
       </provider>
     </entry>

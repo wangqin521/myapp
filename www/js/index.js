@@ -177,22 +177,11 @@ $(function() {
             })
         })
     })
-// 购物车
 // 购物车样式
     $(".select").on('click',function (val) {
         $(this).addClass("select_bg").removeClass("unselect_bg");
     })
-
-
-//底部样式跳转
-//     $("#index_section>article").change(function(){
-//         let i = $(this).index();
-//         console.log(i);
-//         if($(this).hasClass("active")){
-//             $("#footer>a").eq(i).addClass("active").siblings().removeClass("active");
-//         }
-//     })
-
+// 页面切换底部按钮样式切换
     $(".change").on('click',function(){
         let href =$(this).attr("href").substr(1);
         $("footer a").map(function (index,val) {
@@ -203,7 +192,7 @@ $(function() {
         })
 
     })
-
+// 添加到购物车
     $(".add_cart").on('click',function () {
         $(this).parent()[0].innerText.split(" ");
 
