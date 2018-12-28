@@ -182,7 +182,8 @@ $(function() {
             $("#classify_right ul").eq(i).show().siblings().hide();
         })
     })
-
+// 购物车
+//     从首页添加
 
 })
 
