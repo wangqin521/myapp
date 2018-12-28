@@ -250,14 +250,16 @@ div#home_activity{
     width: 96%;
 }
 /*底部*/
-footer{
+#footer{
     background: #FFFFFF;
     border-top: 1px solid #e5e5e5;
+    height: 15vw;
+    padding-top: 1vw;
 }
-footer a{
+#footer a{
     color: #000;
 }
-footer a i{
+#footer a i{
     background: url("../img/footer/purple_6.png") no-repeat;
     background-size: 100% 100%;
     margin: 0 auto;
@@ -265,42 +267,42 @@ footer a i{
     width: 9vw;
     height: 8.5vw;
 }
-footer a:nth-child(2) i{
+#footer a:nth-child(2) i{
     background: url("../img/footer/purple_8.png") no-repeat;
     background-size: 100% 100%;
 }
-footer a:nth-child(3) i{
+#footer a:nth-child(3) i{
     background: url("../img/footer/purple_10.png") no-repeat;
     background-size: 100% 100%;
 }
-footer a:nth-child(4) i{
+#footer a:nth-child(4) i{
     background: url("../img/footer/purple_12.png") no-repeat;
     background-size: 100% 100%;
 }
-footer a:nth-child(5) i{
+#footer a:nth-child(5) i{
     background: url("../img/footer/purple_14.png") no-repeat;
     background-size: 100% 100%;
 }
-footer .active_i{
+#footer a.active{
     color: red;
 }
-footer .active_i i{
+#footer a.active i{
     background: url("../img/footer/purple_5.png") no-repeat;
     background-size: 100% 100%;
 }
-footer a:nth-child(2).active_i i{
+#footer a:nth-child(2).active i{
     background: url("../img/footer/purple_7.png") no-repeat;
     background-size: 100% 100%;
 }
-footer a:nth-child(3).active_i i{
+#footer a:nth-child(3).active i{
     background: url("../img/footer/purple_9.png") no-repeat;
     background-size: 100% 100%;
 }
-footer a:nth-child(4).active_i i{
+#footer a:nth-child(4).active i{
     background: url("../img/footer/purple_11.png") no-repeat;
     background-size: 100% 100%;
 }
-footer a:nth-child(5).active_i i{
+#footer a:nth-child(5).active i{
     background: url("../img/footer/purple_13.png") no-repeat;
     background-size: 100% 100%;
 }
@@ -385,4 +387,122 @@ footer a:nth-child(5).active_i i{
 }
 .unactive_ul{
     display: none;
+}
+/*常购清单*/
+#shoplist_article header{
+    background: #FFF;
+    border-bottom: 1px solid #DADADA;
+}
+#shoplist_article header h1{
+    color: #000;
+    font-size: 4vw;
+    margin: 5vw auto;
+}
+.article{
+    margin-top: -2vw;
+}
+#shoplist_article img,#cart_article img{
+    width: 44vw;
+    margin: 0 28vw;
+    padding-top: 15vw;
+}
+.go_shoping{
+    display: block;
+    width: 60vw;
+    height: 12vw;
+    line-height: 12vw;
+    background: #C6423D;
+    border-radius: 6vw;
+    color: #FFF;
+    font-size: 4vw;
+    text-align: center;
+    margin: 6vw auto 30vw
+}
+.article_footer{
+    background: #FFF;
+    height: 12vw;
+    width: 100vw;
+    line-height: 12vw;
+    border-top: 1px solid #e5e5e5;
+    position: fixed;
+    bottom: 15vw;
+    margin-bottom: -1px;
+}
+.cart{
+    display: inline-block;
+    width: 6vw;
+    height: 6vw;
+    margin: 3vw 5vw;
+    background: url("../img/shopping_cart_red.png") no-repeat;
+    background-size: 100% 100%;
+}
+.article_footer>a>span{
+    float: right;
+    display: inline-block;
+    width: 30vw;
+    height: 100%;
+    font-size: 4vw;
+    color: #FFF;
+    background: #C6423D;
+    text-align: center;
+    position: relative;
+}
+/*购物车*/
+#cart_article header{
+    background: linear-gradient(to right,#F3555F,#C6423D);
+    font-size: 4vw;
+    display: flex;
+    justify-content: space-between;
+}
+#cart_article>article{
+    background: #EFEFEF;
+}
+#cart_article header h4{
+    margin: 5vw 0 0 5vw;
+    font-size: 4vw;
+}
+#cart_article header a{
+    margin: 5vw 5vw 0 0;
+    font-size: 3.5vw;
+    color: #FFF;
+}
+.shoping_ul li{
+    float: left;
+    font-size: 4vw;
+    margin-right: 3vw;
+    color: #7A7A7A;
+}
+.select{
+    display: inline-block;
+    width: 5vw;
+    height: 5vw;
+    margin: 3.5vw 0 3.5vw 3vw;
+}
+.unselect_bg{
+    background: url("../img/cancel_gray.png") no-repeat;
+    background-size: 100% 100%;
+}
+.select_bg{
+    background: url("../img/cancel_green_3.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+.shoping_ul b{
+    font-weight: bolder;
+    color: #000;
+}
+.shoping_ul span{
+    color: #C6423D;
+    font-weight: bolder;
+}
+.triangle{
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-width: 2vw;
+    border-style: solid;
+    border-color: transparent transparent transparent #FFF;
+    position: absolute;
+    left:23vw;
+    top: 4vw;
 }

@@ -97,7 +97,7 @@ $(function() {
                           <div>
                             <span>${newprice}</span>
                             <del>${oldprice}</del>
-                            <i></i>
+                            <i class="add_cart"></i>
                           </div></li>`;
             });
             $("#home_floor ul").eq(i).html(html1+html2);
@@ -127,12 +127,7 @@ $(function() {
     $("#to_top").on('click',function(){
         $("#home_article").scrollTop(0);
     })
-// footer 选项卡功能实现页面的切换
-//     $("footer a").on('click', function () {
-//         $(this).addClass("active_i").siblings().removeClass("active_i");
-//         let i = $(this).index();
-//         $(this).parent().siblings().not("header").eq(i).addClass("active").siblings().removeClass("active");
-//     })
+//分类页
     //分类页数据渲染
     $.get(url3,function(res){
         let data = $.parseJSON(res).data;
@@ -141,36 +136,31 @@ $(function() {
         let html2 = '';
         let html4 = '';
         let html5 = '';
-        let code = [];
         data.map(function(val,index){
             let name = val.name;
+            let code = val.code;
             if(index == 0){
-                html1 = `<li class="classify_left_bg">${name}</li>`
+                html1 = `<li class="classify_left_bg" id="${code}">${name}</li>`
             }else{
-                html2 += `<li>${name}</li>`
+                html2 += `<li id="${code}">${name}</li>`
             }
             html=html1+html2;
-            code.push(val.code);
-        })
-        console.log(code);
-        code.map(function(val){
-            let url_r = url3+'&parentId='+val;
-            console.log(url_r);
+
+            let url_r = url3+'&parentId='+code;
             $.get(url_r,function(res){
+                let code_r = url_r.split("=")[2];
                 let data_r = $.parseJSON(res).data;
                 let html3 = '';
                 data_r.map(function(val){
                     let name_r = val.name;
                     let picture =imgUrl+val.picture;
-                    html3 += `<li><a href="#"><div><img src="${picture}" alt=""></div><span>${name_r}</span></a></li>`
+                    html3 += `<li><a href="#"><div><img src="${picture}" alt=""></div><span>${name_r}</span></a></li>`;
                 })
-                console.log(html3);
-                if(val == 4000){
-                    html4 = `<ul class="active_ul">${html3}</ul>`;
+                if( code_r == 4000){
+                    html4 = `<ul class="active_ul" id="${code_r}">${html3}</ul>`;
                 }else{
-                    html5 += `<ul class="unactive_ul">${html3}</ul>`;
+                    html5 += `<ul class="unactive_ul" id="${code_r}">${html3}</ul>`;
                 }
-
                 $("#classify_right").html(html4+html5);
             })
         })
@@ -178,11 +168,46 @@ $(function() {
         // 分类页样式
         $("#classify_left li").on('click',function(){
             $(this).addClass("classify_left_bg").siblings().removeClass("classify_left_bg");
-            let i = $(this).index();
-            $("#classify_right ul").eq(i).show().siblings().hide();
+            let id_l = $(this).attr("id")
+            $("#classify_right ul").map(function(index,val){
+                let id_r = val.id;
+                if(id_r == id_l){
+                    $("#classify_right ul").eq(index).addClass("active_ul").removeClass("unactive_ul").siblings().addClass("unactive_ul").removeClass("active_ul")
+                }
+            })
         })
     })
+// 购物车
+// 购物车样式
+    $(".select").on('click',function (val) {
+        $(this).addClass("select_bg").removeClass("unselect_bg");
+    })
 
+
+//底部样式跳转
+//     $("#index_section>article").change(function(){
+//         let i = $(this).index();
+//         console.log(i);
+//         if($(this).hasClass("active")){
+//             $("#footer>a").eq(i).addClass("active").siblings().removeClass("active");
+//         }
+//     })
+
+    $(".change").on('click',function(){
+        let href =$(this).attr("href").substr(1);
+        $("footer a").map(function (index,val) {
+            let href1 = val.href.split("#")[1];
+            if(href1==href){
+                $("footer a").eq(index).addClass("active").siblings().removeClass("active")
+            }
+        })
+
+    })
+
+    $(".add_cart").on('click',function () {
+        $(this).parent()[0].innerText.split(" ");
+
+    })
 
 })
 

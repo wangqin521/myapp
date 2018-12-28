@@ -16,12 +16,13 @@
     <div id="section_container"><!--页面容器--->
         <section id="index_section" class="active">
             <footer id="footer">
-                <a href="#home_article" data-target="article" class="active_i"><i></i><span>首页</span></a>
+                <a href="#home_article" data-target="article" class="active"><i></i><span>首页</span></a>
                 <a href="#classify_article" data-target="article"><i></i><span>分类</span></a>
                 <a href="#shoplist_article" data-target="article"><i></i><span>常购清单</span></a>
                 <a href="#cart_article" data-target="article"><i></i><span>购物车</span></a>
                 <a href="#me_article" data-target="article"><i></i><span>我的</span></a>
             </footer>
+            <!--首页-->
             <article id="home_article" class="active scroll">
                 <header>
                     <ul>
@@ -403,6 +404,7 @@
                     </div>
                 </article>
             </article>
+            <!--分类-->
             <article id="classify_article">
                 <header><input type="search" class="search_input" onclick="J.Router.goTo('#searchList_section')"></header>
                 <article class="active">
@@ -576,12 +578,44 @@
                         </div>
                 </article>
             </article>
+            <!--常购清单-->
             <article id="shoplist_article">
-                33333
+                <header>
+                    <a href="#" data-target="back" class="back"></a>
+                    <h1>我的常购清单</h1>
+                </header>
+                <article class="active scroll article">
+                    <img src="img/oftenBuyPic.png" alt="">
+                    <a class="go_shoping change 1" href="#home_article" data-target="article">去逛逛</a>
+                    <div class="article_footer">
+                        <a href="#cart_article" data-target="article" class="change 2">
+                            <i class="cart"></i>
+                        </a>
+                        <a href="#cart_article" data-target="article" class="change 3"><span>我的购物车</span></a>
+                    </div>
+                </article>
             </article>
+            <!--购物车-->
             <article id="cart_article">
-                4444
+                <header>
+                    <h4>购物车</h4>
+                    <a href="">删除</a>
+                </header>
+                <article class="active scroll article">
+                    <img src="img/shoppingCarPic.png" alt="">
+                    <a class="go_shoping change 4" href="#home_article" data-target="article" >去逛逛</a>
+                    <div class="article_footer">
+                        <ul class="shoping_ul">
+                            <li><i class="select unselect_bg"></i></li>
+                            <li>全选</li>
+                            <li>数量:0&nbsp;&nbsp;</li>
+                            <li><b>合计:</b>&nbsp;&nbsp;<span>￥0.00</span></li>
+                        </ul>
+                        <a href="#"><span>去结算<i class="triangle"></i></span></a>
+                    </div>
+                </article>
             </article>
+            <!--我的-->
             <article id="me_article">
                 555555
             </article>
