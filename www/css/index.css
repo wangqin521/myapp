@@ -401,7 +401,7 @@ div#home_activity{
 .article{
     margin-top: -2vw;
 }
-#shoplist_article img,#cart_article img{
+#shoplist_article img,#cart_empty img{
     width: 44vw;
     margin: 0 28vw;
     padding-top: 15vw;
@@ -505,4 +505,39 @@ div#home_activity{
     position: absolute;
     left:23vw;
     top: 4vw;
+}
+/*购物车*/
+.article_header{
+    width: 100vw;
+    height: 35vw;
+    background: linear-gradient(to right,#F3555F,#C6423D);
+}
+.cart_list{
+    width: 98vw;
+    position: absolute;
+    top: 0;
+    left: 1vw;
+    background: #FFF;
+    border-radius: 4vw;
+}
+.cart_list ul>p{
+    height: 12vw;
+    line-height: 12vw;
+    border: 1px solid red;
+}
+.cart_list ul i{
+    position: absolute;
+    left: -1vw;
+}
+.cart_list ul>p>span{
+    margin-left: 9vw;
+    font-size: 4vw;
+}
+.cart_list li{
+    padding: 4vw 0;
+}
+.cart_list img{
+    width: 25vw;
+    height: auto;
+
 }

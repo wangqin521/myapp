@@ -190,14 +190,12 @@ $(function() {
                 $("footer a").eq(index).addClass("active").siblings().removeClass("active")
             }
         })
-
     })
 // 添加到购物车
     $(".add_cart").on('click',function () {
-        $(this).parent()[0].innerText.split(" ");
-
+        let price = $(this).parent()[0].innerText.split(" ");
+        console.log(price);
     })
-
 })
 
 
